@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="605.0" prefWidth="871.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="253.0" fitWidth="1083.0" layoutY="-162.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@resumen-difuminado-supermercado-grandes-almacenes_1203-8782%20(copia).jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="196.0" fitWidth="339.0" layoutX="591.0" layoutY="-105.0" opacity="0.68" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@blackkkk.jpg" />
+         </image>
+      </ImageView>
+      <Hyperlink layoutX="772.0" layoutY="66.0" text="Cerrar Sesión" textFill="#3934d0" />
+      <Label layoutX="601.0" layoutY="14.0" text="Hola," textFill="WHITE">
+         <font>
+            <Font name="NanumGothicBold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="601.0" layoutY="36.0" text="Nombre Usuario" textFill="WHITE">
+         <font>
+            <Font name="NanumGothicBold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="601.0" layoutY="62.0" text="Gerente" textFill="WHITE">
+         <font>
+            <Font name="NanumGothicBold" size="13.0" />
+         </font>
+      </Label>
+      <MenuBar layoutX="-2.0" prefHeight="31.0" prefWidth="593.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Programa">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Guardar">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" text="Guardar como">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" text="Salir">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@salir.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Editar">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ayuda">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Acerca de nosotros">
+                     <graphic>
+                        <ImageView fitHeight="75.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@thumbnail_poster4_7_05749.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" text="Codigos de productos">
+                     <graphic>
+                        <ImageView fitHeight="75.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@cajero.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" text="Herramienta de inventario">
+                     <graphic>
+                        <ImageView fitHeight="75.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@inventarios_115980454.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TabPane layoutY="102.0" prefHeight="506.0" prefWidth="871.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab closable="false" text="CAJERO">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Accordion layoutY="6.0" />
+                        <Pane layoutX="619.0" layoutY="126.0" prefHeight="313.0" prefWidth="246.0">
+                           <children>
+                              <Label layoutX="36.0" layoutY="40.0" text="TOTAL A PAGAR">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="65.0" layoutY="66.0" text="47.500" />
+                              <Label layoutX="36.0" layoutY="166.0" text="CAMBIO">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="36.0" layoutY="105.0" text="TOTAL ENTREGADO">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="42.0" layoutY="66.0" text="\$" />
+                              <Label layoutX="65.0" layoutY="198.0" text="47.500" />
+                              <Label layoutX="42.0" layoutY="198.0" text="\$" />
+                              <TextField layoutX="36.0" layoutY="124.0" promptText="PAGA" />
+                              <Button layoutX="21.0" layoutY="246.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="205.0" text="ACEPTAR" />
+                              <Separator layoutX="8.0" layoutY="5.0" prefHeight="6.0" prefWidth="237.0" />
+                              <Separator layoutX="4.0" layoutY="7.0" orientation="VERTICAL" prefHeight="294.0" prefWidth="8.0" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="626.0" layoutY="6.0" prefHeight="124.0" prefWidth="245.0" />
+                     </children></AnchorPane>
+            </content>
+               <graphic>
+                  <ImageView fitHeight="75.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@cajeroPanel.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+          </Tab>
+          <Tab text="INVENTARIO">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="192.0" prefWidth="642.0" />
+            </content>
+               <graphic>
+                  <ImageView fitHeight="75.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@inventarios_115980454.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+          </Tab>
+            <Tab text="EMPLEADOS">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="192.0" prefWidth="642.0" />
+               </content>
+               <graphic>
+                  <ImageView fitHeight="75.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@thumbnail_poster4_7_05749.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</Pane>

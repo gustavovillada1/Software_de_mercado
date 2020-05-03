@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="373.0" prefWidth="517.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane prefHeight="373.0" prefWidth="517.0">
+         <children>
+            <ImageView fitHeight="172.0" fitWidth="524.0" layoutX="-4.0" layoutY="-78.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../imagenes/imagenSupermercadoHorizontal.jpg" />
+               </image>
+            </ImageView>
+            <ScrollPane layoutY="60.0" prefHeight="316.0" prefWidth="517.0">
+               <content>
+                  <Pane prefHeight="417.0" prefWidth="505.0">
+                     <children>
+                        <Text layoutX="5.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenido querido inventarista, a continuación podras ver algunas instrucciones de como manejar el inventario." wrappingWidth="495.416015625" />
+                        <Label layoutX="6.0" layoutY="161.0" text="AGREGAR UN UN PRODUCTO">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="6.0" layoutY="74.0" text="ELIMINAR PRODUCTOS">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Text layoutX="7.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Para eliminar productos del carrito simplemente debes conocer el codigo del producto a eliminar, elegir si esta en mal estado y hacer una pequeña descripcion de porque se elimina." wrappingWidth="495.416015625" />
+                        <Text layoutX="7.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Para agregar un producto al inventario, es necesario conocer cuál es la categoria y subcategoria de producto que queremos agregar:" wrappingWidth="495.416015625" />
+                        <Text layoutX="28.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-Categoria: En categoria esta por ejemplo ALIMENTOS, LIMPIEZA, HOGAR." wrappingWidth="460.416015625" />
+                        <Text layoutX="28.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-Subategoria: En subcategoría, por ejemplo  &quot;Arroz Diana x500g&quot; , se encuentra en la categoria ALIMENTOS, y en la subcategoria CEREALES." wrappingWidth="460.416015625" />
+                        <Text layoutX="5.0" layoutY="348.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Para agregar una categoria o subcategoria nueva simplemente clickeamos en nuevo." wrappingWidth="495.416015625" />
+                     </children>
+                  </Pane>
+               </content>
+            </ScrollPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.PrincipalController">
+   <children>
+      <AnchorPane>
+	<!-- TODO Add Nodes -->
+</AnchorPane>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="605.0" prefWidth="871.0">
+         <children>
+            <ImageView fitHeight="253.0" fitWidth="1083.0" layoutY="-162.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../imagenes/imagenSupermercadoHorizontal.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="196.0" fitWidth="339.0" layoutX="591.0" layoutY="-105.0" opacity="0.68" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../imagenes/panelNegro.jpg" />
+               </image>
+            </ImageView>
+            <Hyperlink fx:id="linkCloseSesion" layoutX="758.0" layoutY="66.0" onAction="#closeSesion" text="Cerrar Sesión" textFill="#3934d0" />
+            <Label layoutX="601.0" layoutY="14.0" text="Hola," textFill="WHITE">
+               <font>
+                  <Font name="NanumGothicBold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelUsername" layoutX="601.0" layoutY="36.0" text="Nombre Usuario" textFill="WHITE">
+               <font>
+                  <Font name="NanumGothicBold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelWork" layoutX="601.0" layoutY="62.0" text="Gerente" textFill="WHITE">
+               <font>
+                  <Font name="NanumGothicBold" size="13.0" />
+               </font>
+            </Label>
+            <MenuBar layoutX="-2.0" prefHeight="31.0" prefWidth="593.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="Programa">
+                  <items>
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                    <MenuItem fx:id="guardar" mnemonicParsing="false" onAction="#guardar" text="Guardar">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../imagenes/guardar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="salirAplicacion" mnemonicParsing="false" onAction="#salir" text="Salir">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../imagenes/salir.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Ayuda">
+                  <items>
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="menuAyudaCaja" mnemonicParsing="false" onAction="#menuAyudaCaja" text="Codigos de productos">
+                           <graphic>
+                              <ImageView fitHeight="75.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../imagenes/cajero.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="menuAyudaInventario" mnemonicParsing="false" onAction="#menuAyudaInventario" text="Ayuda iventario">
+                           <graphic>
+                              <ImageView fitHeight="75.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../imagenes/inventario.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <TabPane layoutY="117.0" prefHeight="491.0" prefWidth="871.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab fx:id="seccionCajero" closable="false" text="CAJERO">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane layoutX="620.0" layoutY="117.0" prefHeight="313.0" prefWidth="246.0">
+                                 <children>
+                                    <Label layoutX="36.0" layoutY="40.0" text="TOTAL A PAGAR">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="labelTotalPagar" layoutX="65.0" layoutY="66.0" text="0" />
+                                    <Label layoutX="36.0" layoutY="166.0" text="CAMBIO">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="36.0" layoutY="105.0" text="TOTAL ENTREGADO">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="42.0" layoutY="66.0" text="\$" />
+                                    <Label fx:id="labelCambio" layoutX="65.0" layoutY="198.0" text="0" />
+                                    <Label layoutX="42.0" layoutY="198.0" text="\$" />
+                                    <TextField fx:id="textTotalEntregado" layoutX="36.0" layoutY="124.0" promptText="PAGA" />
+                                    <Button fx:id="buttonGenerateFacture" layoutX="21.0" layoutY="246.0" mnemonicParsing="false" onAction="#generateFacture" prefHeight="39.0" prefWidth="205.0" text="ACEPTAR" />
+                                    <Separator layoutX="8.0" layoutY="9.0" prefHeight="6.0" prefWidth="237.0" />
+                                    <Separator layoutX="5.0" layoutY="11.0" orientation="VERTICAL" prefHeight="355.0" prefWidth="8.0" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutY="241.0" prefHeight="232.0" prefWidth="246.0">
+                                 <children>
+                                    <Label layoutX="42.0" layoutY="8.0" text="AGREGAR PRODUCTOS" textFill="#10ae0d">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="7.0" layoutY="107.0" text="CANTIDAD">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="8.0" layoutY="40.0" text="CODIGO DEL PRODUCTO">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="textCodeProductAddCajero" layoutX="7.0" layoutY="66.0" prefHeight="24.0" prefWidth="135.0" promptText="Código Numerico" />
+                                    <Button fx:id="buttonAddProductCajero" layoutX="7.0" layoutY="168.0" mnemonicParsing="false" onAction="#addProductCajero" prefHeight="39.0" prefWidth="231.0" text="AGREGAR" />
+                                    <Separator layoutX="8.0" layoutY="-5.0" prefHeight="0.0" prefWidth="237.0" />
+                                    <Separator layoutX="241.0" layoutY="7.0" orientation="VERTICAL" prefHeight="294.0" prefWidth="15.0" />
+                                    <Separator layoutX="5.0" layoutY="26.0" prefHeight="6.0" prefWidth="237.0" />
+                                    <TextField fx:id="textCantidadAddCajero" layoutX="7.0" layoutY="133.0" prefHeight="26.0" prefWidth="76.0" promptText="Cantidad " />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="7.0" prefHeight="234.0" prefWidth="246.0">
+                                 <children>
+                                    <Label layoutX="44.0" layoutY="20.0" text="ELIMINAR PRODUCTOS" textFill="#e40303">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="14.0" layoutY="117.0" text="CANTIDAD">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="15.0" layoutY="50.0" text="CODIGO DEL PRODUCTO">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="textCodeProductDeleteCajero" layoutX="14.0" layoutY="76.0" prefHeight="24.0" prefWidth="135.0" promptText="Código Numerico" />
+                                    <Button fx:id="buttonDeleteProductCajero" layoutX="14.0" layoutY="178.0" mnemonicParsing="false" onAction="#deteleProductCajero" prefHeight="39.0" prefWidth="205.0" text="ELIMINAR" />
+                                    <Separator layoutX="4.0" layoutY="5.0" prefHeight="6.0" prefWidth="237.0" />
+                                    <Separator layoutX="238.0" layoutY="7.0" orientation="VERTICAL" prefHeight="294.0" prefWidth="8.0" />
+                                    <Separator layoutX="4.0" layoutY="41.0" prefHeight="6.0" prefWidth="237.0" />
+                                    <TextField fx:id="textCantidadDeleteCajero" layoutX="14.0" layoutY="143.0" prefHeight="26.0" prefWidth="76.0" promptText="Cantidad " />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="256.0" layoutY="76.0" prefHeight="370.0" prefWidth="359.0">
+                                 <children>
+                                    <Label layoutX="17.0" layoutY="327.0" text="Producto" />
+                                    <Label layoutX="17.0" layoutY="350.0" text="Cantidad" />
+                                    <Label layoutX="17.0" layoutY="303.0" text="Codigo" />
+                                    <Label fx:id="downCostoXunidad" layoutX="273.0" layoutY="311.0" text="0" />
+                                    <Label layoutX="254.0" layoutY="288.0" text="Costo x Und">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="downProduct" layoutX="105.0" layoutY="328.0" text="Producto" />
+                                    <Label fx:id="downCantidad" layoutX="104.0" layoutY="351.0" text="0" />
+                                    <Label fx:id="downCode" layoutX="105.0" layoutY="304.0" text="Ninguno" />
+                                    <Label layoutX="17.0" layoutY="280.0" text="Costo x Und">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TableView fx:id="tableViewProducts" layoutX="7.0" layoutY="2.0" prefHeight="276.0" prefWidth="354.0">
+                                      <columns>
+                                        <TableColumn prefWidth="117.0" text="Producto" />
+                                        <TableColumn text="Codigo" />
+                                          <TableColumn prefWidth="75.0" text="Precio" />
+                                          <TableColumn prefWidth="75.0" text="Total" />
+                                      </columns>
+                                    </TableView>
+                                    <Label fx:id="downCostoXunidad1" layoutX="260.0" layoutY="311.0" text="\$" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="261.0" layoutY="3.0" prefHeight="73.0" prefWidth="593.0">
+                                 <children>
+                                    <Separator layoutX="1.0" layoutY="4.0" prefHeight="0.0" prefWidth="593.0" />
+                                    <Separator layoutX="1.0" layoutY="69.0" prefHeight="0.0" prefWidth="593.0" />
+                                    <Separator layoutY="5.0" orientation="VERTICAL" prefHeight="65.0" prefWidth="8.0" />
+                                    <Separator layoutX="590.0" layoutY="3.0" orientation="VERTICAL" prefHeight="68.0" prefWidth="6.0" />
+                                    <Label layoutX="14.0" layoutY="14.0" text="Informacion cliente:">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="textNameClient" layoutX="158.0" layoutY="31.0" />
+                                    <TextField fx:id="textIdentificationClient" layoutX="400.0" layoutY="31.0" />
+                                    <Label layoutX="184.0" layoutY="14.0" text="Nombre y apellido" />
+                                    <Label layoutX="442.0" layoutY="14.0" text="Identificacion" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                     <graphic>
+                        <ImageView fitHeight="75.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../imagenes/cajeroPanel.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                </Tab>
+                <Tab fx:id="seccionInventario" text="INVENTARIO">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="192.0" prefWidth="642.0">
+                           <children>
+                              <TabPane layoutX="518.0" layoutY="14.0" prefHeight="455.0" prefWidth="356.0" tabClosingPolicy="UNAVAILABLE">
+                                <tabs>
+                                  <Tab text="AGREGAR">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <Pane layoutX="-6.0" layoutY="4.0" prefHeight="410.0" prefWidth="349.0">
+                                                   <children>
+                                                      <Label layoutX="44.0" layoutY="20.0" text="AGREGAR PRODUCTOS" textFill="#1ad380">
+                                                         <font>
+                                                            <Font name="System Bold" size="13.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Button layoutX="13.0" layoutY="305.0" mnemonicParsing="false" onAction="#addNewProductInventario" prefHeight="89.0" prefWidth="330.0" text="AGREGAR NUEVO PRODUCTO" />
+                                                      <Separator layoutX="11.0" layoutY="5.0" prefHeight="5.0" prefWidth="303.0" />
+                                                      <Separator layoutX="11.0" layoutY="41.0" prefHeight="0.0" prefWidth="301.0" />
+                                                      <ImageView fitHeight="229.0" fitWidth="294.0" layoutX="29.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../imagenes/logoMERCAJUSTO.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </Pane>
+                                             </children></AnchorPane>
+                                    </content>
+                                  </Tab>
+                                  <Tab text="ELIMINAR">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="422.0" prefWidth="326.0">
+                                             <children>
+                                                <Pane layoutX="-6.0" layoutY="4.0" prefHeight="410.0" prefWidth="355.0">
+                                                   <children>
+                                                      <Label layoutX="44.0" layoutY="20.0" text="ELIMINAR PRODUCTOS" textFill="#e40303">
+                                                         <font>
+                                                            <Font name="System Bold" size="13.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="14.0" layoutY="117.0" text="CANTIDAD">
+                                                         <font>
+                                                            <Font name="System Bold" size="13.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="15.0" layoutY="50.0" text="CODIGO DEL PRODUCTO">
+                                                         <font>
+                                                            <Font name="System Bold" size="13.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="codeProduct11" layoutX="14.0" layoutY="76.0" prefHeight="24.0" prefWidth="135.0" promptText="Código Numerico" />
+                                                      <Button layoutX="8.0" layoutY="347.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="349.0" text="ELIMINAR" />
+                                                      <Separator layoutX="11.0" layoutY="5.0" prefHeight="5.0" prefWidth="303.0" />
+                                                      <Separator layoutX="11.0" layoutY="41.0" prefHeight="0.0" prefWidth="301.0" />
+                                                      <TextField fx:id="codeProduct111" layoutX="14.0" layoutY="143.0" prefHeight="26.0" prefWidth="76.0" promptText="Cantidad " />
+                                                      <TextArea layoutX="15.0" layoutY="186.0" prefHeight="132.0" prefWidth="279.0" promptText="Describir situación del producto." />
+                                                      <CheckBox layoutX="169.0" layoutY="147.0" mnemonicParsing="false" text="Mal estado" />
+                                                   </children>
+                                                </Pane>
+                                             </children>
+                                          </AnchorPane>
+                                    </content>
+                                  </Tab>
+                                </tabs>
+                              </TabPane>
+                              <Separator layoutX="516.0" layoutY="14.0" orientation="VERTICAL" prefHeight="448.0" prefWidth="5.0" />
+                              <Accordion layoutX="222.0" layoutY="104.0" />
+                              <Label layoutX="14.0" layoutY="14.0" text="INVENTARIO DE PRODUCTOS" />
+                              <TableView layoutX="9.0" layoutY="42.0" prefHeight="405.0" prefWidth="502.0">
+                                <columns>
+                                  <TableColumn prefWidth="183.0" text="Nombre" />
+                                  <TableColumn minWidth="3.0" prefWidth="114.0" text="Codigo" />
+                                    <TableColumn prefWidth="96.0" text="Medida" />
+                                    <TableColumn prefWidth="108.0" text="Precio" />
+                                </columns>
+                              </TableView>
+                           </children></AnchorPane>
+                  </content>
+                     <graphic>
+                        <ImageView fitHeight="75.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../imagenes/inventario.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                </Tab>
+                  <Tab fx:id="seccionEmpleados" text="EMPLEADOS">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="192.0" prefWidth="642.0">
+                           <children>
+                              <Label layoutX="199.0" layoutY="40.0" text="EMPLEADOS" />
+                              <Button layoutX="671.0" layoutY="190.0" mnemonicParsing="false" text="Generar" />
+                              <Text layoutX="573.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hola, bienvenido señor gerente, eliga una opcion. " wrappingWidth="283.68310546875">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></Text>
+                              <Label layoutX="591.0" layoutY="162.0" text="Generar reporte de nomina mensual.." />
+                              <TextArea fx:id="messaggeGerentText" layoutX="592.0" layoutY="296.0" prefHeight="61.0" prefWidth="245.0" />
+                              <Label layoutX="591.0" layoutY="267.0" text="Escribir mensaje para empleados" />
+                              <Button layoutX="679.0" layoutY="374.0" mnemonicParsing="false" onAction="#showMessaggeGerente" text="Generar" />
+                              <Separator layoutX="560.0" layoutY="68.0" prefHeight="6.0" prefWidth="311.0" />
+                              <Separator layoutX="559.0" layoutY="114.0" prefHeight="6.0" prefWidth="311.0" />
+                              <Separator layoutX="560.0" layoutY="236.0" prefHeight="6.0" prefWidth="311.0" />
+                              <Separator layoutX="560.0" layoutY="443.0" prefHeight="6.0" prefWidth="311.0" />
+                              <TableView fx:id="tableViewEmployees" layoutX="14.0" layoutY="69.0" prefHeight="378.0" prefWidth="550.0">
+                                <columns>
+                                  <TableColumn fx:id="tableColumNameEmployee" minWidth="0.0" prefWidth="157.0" text="Nombre" />
+                                  <TableColumn fx:id="tableColumLastNameEmployee" minWidth="0.0" prefWidth="137.0" text="Apellido" />
+                                    <TableColumn fx:id="tableColumWorkEmployee" prefWidth="130.0" text="Cargo" />
+                                    <TableColumn fx:id="tableColumSalaryEmployee" prefWidth="125.0" text="Salario" />
+                                </columns>
+                              </TableView>
+                           </children></AnchorPane>
+                     </content>
+                     <graphic>
+                        <ImageView fitHeight="75.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../imagenes/logoMERCAJUSTO.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Tab>
+              </tabs>
+            </TabPane>
+            <Pane layoutX="-2.0" layoutY="94.0" prefHeight="24.0" prefWidth="878.0">
+               <children>
+                  <Label fx:id="messaggeGerent" layoutX="11.0" layoutY="4.0" text="MENSAJE DEL GERENTE:" textFill="#e10f0f">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
