@@ -1,0 +1,9 @@
+----------REPORTE SALARIOS DE EMPLEADOS POR BURBUJA-----
+
+Daniel Felipe		 LIMPIEZA	 1210000
+Camilo Santiago		 PASILLO	 1238600
+Wanda Villacorte		 PASILLO	 2310000
+GUSTAVO VILLADA		 GERENTE	 2500000
+Aleyda 		 PASILLO	 5432100
+--------------------------------------------------------
+TOTAL SALARIOS: 		 $ 12690700

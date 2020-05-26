@@ -5,10 +5,20 @@ import model.Account;
 import model.DoubleLinkedCircularAccounts;
 import model.Employee;
 import model.Principal;
+import model.herencia.Product;
+import model.herencia.ProductCleaning;
+import model.herencia.ProductDrinks;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileReader;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.Serializable;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
@@ -21,6 +31,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.PasswordField;
@@ -28,9 +39,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
-public class LoadController implements Initializable{
-
-	
+public class LoadController implements Initializable,Serializable{
 
     @FXML
     private Button buttonSignUp;
@@ -65,21 +74,24 @@ public class LoadController implements Initializable{
     	stage1.setTitle("Registrar Empleados");
     	stage1.showAndWait();  // Tema de las alertas.
     	
-    	
-    	
+
     	Employee e=controlleR.getEmployee();
     	Account employeeAccount = controlleR.getAccount();
+    	
     	boolean account=controlleR.getAccountYes();
     	
-    	if(e!=null&&account==true) {
+    	//Si el empleado viene con una cuenta de acceso creada se agregan a dos estructuras de datos.
+    	if(account==true) {
     		this.principal.getEmployees().add(e);
     		this.principal.getAccounts().add(employeeAccount);
     		
-    	}else if(account=false){
+    	}else{
     		this.principal.getEmployees().add(e);
+    		System.out.println("entras");
     	}
     }
     
+
     @FXML
     void signUp(ActionEvent event) throws IOException {
     	//Verificamos que los campos de usuario y contraseña esten llenos.
@@ -89,6 +101,7 @@ public class LoadController implements Initializable{
 
     	//Verificamos que la cuenta exista y que la clave sea la correcta, para despues entrar a la ventana principal.
 		boolean foundAccount=false;
+		
 		
 		DoubleLinkedCircularAccounts employeesAccounts=this.principal.getAccounts();
 		
@@ -109,6 +122,7 @@ public class LoadController implements Initializable{
     		    	Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
     		    	window.setScene(scene1);
     		    	window.setTitle("MERCAJUSTO");
+    		    	window.setResizable(false);
     		    	window.show();  
     		    	
     			}else {
@@ -133,7 +147,11 @@ public class LoadController implements Initializable{
     }
     
 
-    
+    /**
+     * Metodo encargado de generar una alerta de tipo warning, para ser usada varias veces.
+     * @param tittle El titulo que tendrá esta alerta
+     * @param messagge El mensaje que tendrá la alerta en su contenido.
+     */
     public void showAlert(String tittle,String messagge) {
 		
 		Alert alert=new Alert(AlertType.WARNING);
@@ -143,24 +161,32 @@ public class LoadController implements Initializable{
 		alert.showAndWait();
     }
 
-    public void initializeAtribute(Principal p) {    	
+    /**
+     * Se encarga de pasar la clase principal a la ventana de inicio, cuando cerramos sesión o agregamos
+     * un nuevo empleado.
+     * @param p
+     */
+    public void initializeAtribute(Principal p) {
     	this.principal.setEmployees(p.getEmployees());
     	this.principal.setAccounts(p.getAccounts());
     }
     
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		
-		
 		ArrayList<Employee> employees=new ArrayList<Employee>();
 		DoubleLinkedCircularAccounts employeesAcounts = new DoubleLinkedCircularAccounts();
+		
 		Employee e=new Employee("GUSTAVO VILLADA", "MOLINA", 2500000, 31087247, "GERENTE");
-		Account a=new Account("gustavo", "123", e);
+		Account a=new Account("gustavo", "123", e,"CIRCULO,ROJO");
+				
 		employees.add(e);
 		employeesAcounts.add(a);
-
 		principal=new Principal(employees, employeesAcounts);
-		
+
+
 	}
+	
+	
+
 
 }

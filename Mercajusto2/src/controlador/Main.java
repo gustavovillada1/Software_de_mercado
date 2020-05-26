@@ -19,16 +19,11 @@ public class Main extends Application {
 
 		
 		try {
+			
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(Main.class.getResource("/vista/FXMLload.fxml")); 
-			
-		//cargo la ventana
-		Pane ventana = (Pane) loader.load();
-		
-		//cargo el scene
+		Pane ventana = (Pane) loader.load();		
 		Scene scene=new Scene(ventana);
-		
-		//seteo la scene y la muestro
 		primaryStage.setTitle("Iniciar Sesión");
 		primaryStage.setScene(scene);
 		primaryStage.show();

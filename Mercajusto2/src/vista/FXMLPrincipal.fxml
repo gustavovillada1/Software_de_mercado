@@ -20,6 +20,10 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -30,7 +34,7 @@
 </AnchorPane>
       <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="605.0" prefWidth="871.0">
          <children>
-            <ImageView fitHeight="253.0" fitWidth="1083.0" layoutY="-162.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="circle" fitHeight="253.0" fitWidth="1083.0" layoutY="-162.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../imagenes/imagenSupermercadoHorizontal.jpg" />
                </image>
@@ -40,7 +44,7 @@
                   <Image url="@../../imagenes/panelNegro.jpg" />
                </image>
             </ImageView>
-            <Hyperlink fx:id="linkCloseSesion" layoutX="758.0" layoutY="66.0" onAction="#closeSesion" text="Cerrar Sesión" textFill="#3934d0" />
+            <Hyperlink fx:id="linkCloseSesion" layoutX="481.0" layoutY="70.0" onAction="#closeSesion" text="Cerrar Sesión" textFill="#3934d0" />
             <Label layoutX="601.0" layoutY="14.0" text="Hola," textFill="WHITE">
                <font>
                   <Font name="NanumGothicBold" size="13.0" />
@@ -71,16 +75,7 @@
                            </graphic>
                         </MenuItem>
                         <SeparatorMenuItem mnemonicParsing="false" />
-                        <MenuItem fx:id="salirAplicacion" mnemonicParsing="false" onAction="#salir" text="Salir">
-                           <graphic>
-                              <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../../imagenes/salir.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </MenuItem>
-                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#abrirPrograma" text="Abrir" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Ayuda">
@@ -123,7 +118,10 @@
                                           <Font name="System Bold" size="13.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="labelTotalPagar" layoutX="65.0" layoutY="66.0" text="0" />
+                                    <Label fx:id="labelTotalPagar" layoutX="65.0" layoutY="66.0" text="0" textFill="#0d9744">
+                                       <font>
+                                          <Font size="27.0" />
+                                       </font></Label>
                                     <Label layoutX="36.0" layoutY="166.0" text="CAMBIO">
                                        <font>
                                           <Font name="System Bold" size="13.0" />
@@ -134,7 +132,10 @@
                                           <Font name="System Bold" size="13.0" />
                                        </font>
                                     </Label>
-                                    <Label layoutX="42.0" layoutY="66.0" text="\$" />
+                                    <Label layoutX="42.0" layoutY="66.0" text="\$">
+                                       <font>
+                                          <Font size="23.0" />
+                                       </font></Label>
                                     <Label fx:id="labelCambio" layoutX="65.0" layoutY="198.0" text="0" />
                                     <Label layoutX="42.0" layoutY="198.0" text="\$" />
                                     <TextField fx:id="textTotalEntregado" layoutX="36.0" layoutY="124.0" promptText="PAGA" />
@@ -161,7 +162,14 @@
                                        </font>
                                     </Label>
                                     <TextField fx:id="textCodeProductAddCajero" layoutX="7.0" layoutY="66.0" prefHeight="24.0" prefWidth="135.0" promptText="Código Numerico" />
-                                    <Button fx:id="buttonAddProductCajero" layoutX="7.0" layoutY="168.0" mnemonicParsing="false" onAction="#addProductCajero" prefHeight="39.0" prefWidth="231.0" text="AGREGAR" />
+                                    <Button fx:id="buttonAddProductCajero" layoutX="7.0" layoutY="168.0" mnemonicParsing="false" onAction="#addProductCajero" prefHeight="39.0" prefWidth="231.0" text="     AGREGAR">
+                                       <graphic>
+                                          <ImageView fitHeight="28.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../imagenes/088-shopping-cart-5.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></Button>
                                     <Separator layoutX="8.0" layoutY="-5.0" prefHeight="0.0" prefWidth="237.0" />
                                     <Separator layoutX="241.0" layoutY="7.0" orientation="VERTICAL" prefHeight="294.0" prefWidth="15.0" />
                                     <Separator layoutX="5.0" layoutY="26.0" prefHeight="6.0" prefWidth="237.0" />
@@ -186,7 +194,14 @@
                                        </font>
                                     </Label>
                                     <TextField fx:id="textCodeProductDeleteCajero" layoutX="14.0" layoutY="76.0" prefHeight="24.0" prefWidth="135.0" promptText="Código Numerico" />
-                                    <Button fx:id="buttonDeleteProductCajero" layoutX="14.0" layoutY="178.0" mnemonicParsing="false" onAction="#deteleProductCajero" prefHeight="39.0" prefWidth="205.0" text="ELIMINAR" />
+                                    <Button fx:id="buttonDeleteProductCajero" layoutX="14.0" layoutY="178.0" mnemonicParsing="false" onAction="#deteleProductCajero" prefHeight="39.0" prefWidth="205.0" text="      ELIMINAR">
+                                       <graphic>
+                                          <ImageView fitHeight="28.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../imagenes/087-shopping-cart-4.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></Button>
                                     <Separator layoutX="4.0" layoutY="5.0" prefHeight="6.0" prefWidth="237.0" />
                                     <Separator layoutX="238.0" layoutY="7.0" orientation="VERTICAL" prefHeight="294.0" prefWidth="8.0" />
                                     <Separator layoutX="4.0" layoutY="41.0" prefHeight="6.0" prefWidth="237.0" />
@@ -214,10 +229,9 @@
                                     </Label>
                                     <TableView fx:id="tableViewProducts" layoutX="7.0" layoutY="2.0" prefHeight="276.0" prefWidth="354.0">
                                       <columns>
-                                        <TableColumn prefWidth="117.0" text="Producto" />
-                                        <TableColumn text="Codigo" />
-                                          <TableColumn prefWidth="75.0" text="Precio" />
-                                          <TableColumn prefWidth="75.0" text="Total" />
+                                        <TableColumn fx:id="tableColumnCajeroProduct" prefWidth="181.0" text="Producto" />
+                                        <TableColumn fx:id="tableColumnCajeroCode" prefWidth="79.0" text="Codigo" />
+                                          <TableColumn fx:id="tableColumnCajeroPrice" prefWidth="87.0" text="Precio" />
                                       </columns>
                                     </TableView>
                                     <Label fx:id="downCostoXunidad1" layoutX="260.0" layoutY="311.0" text="\$" />
@@ -268,7 +282,14 @@
                                                             <Font name="System Bold" size="13.0" />
                                                          </font>
                                                       </Label>
-                                                      <Button layoutX="13.0" layoutY="305.0" mnemonicParsing="false" onAction="#addNewProductInventario" prefHeight="89.0" prefWidth="330.0" text="AGREGAR NUEVO PRODUCTO" />
+                                                      <Button layoutX="13.0" layoutY="305.0" mnemonicParsing="false" onAction="#addNewProductInventario" prefHeight="89.0" prefWidth="330.0" text="      AGREGAR NUEVO PRODUCTO">
+                                                         <graphic>
+                                                            <ImageView fitHeight="56.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../imagenes/088-shopping-cart-5.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic></Button>
                                                       <Separator layoutX="11.0" layoutY="5.0" prefHeight="5.0" prefWidth="303.0" />
                                                       <Separator layoutX="11.0" layoutY="41.0" prefHeight="0.0" prefWidth="301.0" />
                                                       <ImageView fitHeight="229.0" fitWidth="294.0" layoutX="29.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
@@ -302,11 +323,11 @@
                                                             <Font name="System Bold" size="13.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField fx:id="codeProduct11" layoutX="14.0" layoutY="76.0" prefHeight="24.0" prefWidth="135.0" promptText="Código Numerico" />
-                                                      <Button layoutX="8.0" layoutY="347.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="349.0" text="ELIMINAR" />
+                                                      <TextField fx:id="textDeleteInventaryCode" layoutX="14.0" layoutY="76.0" prefHeight="24.0" prefWidth="135.0" promptText="Código Numerico" />
+                                                      <Button layoutX="8.0" layoutY="347.0" mnemonicParsing="false" onAction="#deleteProductsInventary" prefHeight="40.0" prefWidth="349.0" text="ELIMINAR" />
                                                       <Separator layoutX="11.0" layoutY="5.0" prefHeight="5.0" prefWidth="303.0" />
                                                       <Separator layoutX="11.0" layoutY="41.0" prefHeight="0.0" prefWidth="301.0" />
-                                                      <TextField fx:id="codeProduct111" layoutX="14.0" layoutY="143.0" prefHeight="26.0" prefWidth="76.0" promptText="Cantidad " />
+                                                      <TextField fx:id="textCantidadDeleteInventary" layoutX="14.0" layoutY="143.0" prefHeight="26.0" prefWidth="76.0" promptText="Cantidad " />
                                                       <TextArea layoutX="15.0" layoutY="186.0" prefHeight="132.0" prefWidth="279.0" promptText="Describir situación del producto." />
                                                       <CheckBox layoutX="169.0" layoutY="147.0" mnemonicParsing="false" text="Mal estado" />
                                                    </children>
@@ -320,12 +341,12 @@
                               <Separator layoutX="516.0" layoutY="14.0" orientation="VERTICAL" prefHeight="448.0" prefWidth="5.0" />
                               <Accordion layoutX="222.0" layoutY="104.0" />
                               <Label layoutX="14.0" layoutY="14.0" text="INVENTARIO DE PRODUCTOS" />
-                              <TableView layoutX="9.0" layoutY="42.0" prefHeight="405.0" prefWidth="502.0">
+                              <TableView fx:id="tableViewProductsInventary" layoutX="9.0" layoutY="42.0" prefHeight="405.0" prefWidth="502.0">
                                 <columns>
-                                  <TableColumn prefWidth="183.0" text="Nombre" />
-                                  <TableColumn minWidth="3.0" prefWidth="114.0" text="Codigo" />
-                                    <TableColumn prefWidth="96.0" text="Medida" />
-                                    <TableColumn prefWidth="108.0" text="Precio" />
+                                  <TableColumn fx:id="tableColumnInventaryName" prefWidth="183.0" text="Nombre" />
+                                  <TableColumn fx:id="tableColumnInventaryCode" minWidth="3.0" prefWidth="114.0" text="Codigo" />
+                                    <TableColumn fx:id="tableColumnInventaryMedida" prefWidth="96.0" text="Medida" />
+                                    <TableColumn fx:id="tableColumnInventaryPrice" prefWidth="108.0" text="Precio" />
                                 </columns>
                               </TableView>
                            </children></AnchorPane>
@@ -343,15 +364,28 @@
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="192.0" prefWidth="642.0">
                            <children>
                               <Label layoutX="199.0" layoutY="40.0" text="EMPLEADOS" />
-                              <Button layoutX="671.0" layoutY="190.0" mnemonicParsing="false" text="Generar" />
+                              <Button layoutX="620.0" layoutY="170.0" mnemonicParsing="false" onAction="#generateReport" prefHeight="59.0" prefWidth="194.0" text="Generar Reporte">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../imagenes/028-download.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></Button>
                               <Text layoutX="573.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hola, bienvenido señor gerente, eliga una opcion. " wrappingWidth="283.68310546875">
                                  <font>
                                     <Font name="System Bold" size="13.0" />
                                  </font></Text>
-                              <Label layoutX="591.0" layoutY="162.0" text="Generar reporte de nomina mensual.." />
-                              <TextArea fx:id="messaggeGerentText" layoutX="592.0" layoutY="296.0" prefHeight="61.0" prefWidth="245.0" />
+                              <TextArea fx:id="messaggeGerentText" layoutX="592.0" layoutY="296.0" prefHeight="61.0" prefWidth="245.0" promptText="Escribe tu mensaje aquí." />
                               <Label layoutX="591.0" layoutY="267.0" text="Escribir mensaje para empleados" />
-                              <Button layoutX="679.0" layoutY="374.0" mnemonicParsing="false" onAction="#showMessaggeGerente" text="Generar" />
+                              <Button layoutX="660.0" layoutY="373.0" mnemonicParsing="false" onAction="#showMessaggeGerente" text="Enviar">
+                                 <graphic>
+                                    <ImageView fitHeight="35.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../imagenes/check.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></Button>
                               <Separator layoutX="560.0" layoutY="68.0" prefHeight="6.0" prefWidth="311.0" />
                               <Separator layoutX="559.0" layoutY="114.0" prefHeight="6.0" prefWidth="311.0" />
                               <Separator layoutX="560.0" layoutY="236.0" prefHeight="6.0" prefWidth="311.0" />
@@ -364,6 +398,9 @@
                                     <TableColumn fx:id="tableColumSalaryEmployee" prefWidth="125.0" text="Salario" />
                                 </columns>
                               </TableView>
+                              <Text layoutX="577.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Generar y descargar reporte de nomina mensual." wrappingWidth="277.16455078125" />
+                              <Button layoutX="746.0" layoutY="27.0" mnemonicParsing="false" onAction="#despedirEmpleado" text="DESPEDIR" />
+                              <TextField fx:id="nameEmployeeDespedido" layoutX="564.0" layoutY="27.0" promptText="APELLIDO" />
                            </children></AnchorPane>
                      </content>
                      <graphic>
@@ -385,6 +422,11 @@
                   </Label>
                </children>
             </Pane>
+            <Ellipse fill="#c0ceda63" layoutX="781.0" layoutY="44.0" radiusX="63.0" radiusY="41.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="circle1" fill="DODGERBLUE" layoutX="781.0" layoutY="44.0" radius="41.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+            <Ellipse fx:id="ellipse" fill="DODGERBLUE" layoutX="781.0" layoutY="44.0" radiusX="41.0" radiusY="26.0" stroke="BLACK" strokeType="INSIDE" style="-fx-rotate: 90;" visible="false" />
+            <Polygon fx:id="triangle" fill="DODGERBLUE" layoutX="781.0" layoutY="62.0" points="-32.933349609375, 13.0, 49.066650390625, 5.0, 0.0, -60.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+            <Rectangle fx:id="rectangle" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="66.0" layoutX="742.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="73.0" />
          </children>
       </Pane>
    </children>

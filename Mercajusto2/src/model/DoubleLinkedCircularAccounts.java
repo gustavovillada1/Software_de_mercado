@@ -1,6 +1,8 @@
 package model;
 
-public class DoubleLinkedCircularAccounts {
+import java.io.Serializable;
+
+public class DoubleLinkedCircularAccounts implements Serializable{
 	private Account first;
 	private int size;
 	

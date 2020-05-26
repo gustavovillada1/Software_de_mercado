@@ -1,19 +1,19 @@
 package model;
 
+import java.io.Serializable;
 import java.util.Observable;
 
-public class MessaggeGerenteThread extends Observable implements Runnable{
+public class MessaggeGerenteThread extends Observable implements Runnable,Serializable{
 
 	private int screenWidth;
 	
-	Thread hilo;
 	public MessaggeGerenteThread() {
 		this.screenWidth=900;
 
 	}
 	
 	public void startThread() {
-		hilo=new Thread(this);
+		Thread hilo=new Thread(this);
 		hilo.start();	
 	}
 	
@@ -32,7 +32,6 @@ public class MessaggeGerenteThread extends Observable implements Runnable{
 		this.setChanged();
 		this.notifyObservers(rec);
 		this.clearChanged();
-		System.out.println(rec+" "+times);
 		
 		}
 		

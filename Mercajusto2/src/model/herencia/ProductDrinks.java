@@ -1,6 +1,8 @@
 package model.herencia;
 
-public class ProductDrinks extends Product{
+
+@SuppressWarnings("serial")
+public class ProductDrinks extends Product {
 
 	private int percentSuggar;
 	private int percentFruit;

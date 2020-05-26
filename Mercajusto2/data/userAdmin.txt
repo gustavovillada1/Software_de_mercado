@@ -1,0 +1,4 @@
+Wanda Villacorte,Gallego,2310000,3121247,PASILLO
+Daniel Felipe,Gomez,1210000,3154247,LIMPIEZA
+Aleyda ,Cardona,5432100,3121791,PASILLO
+Camilo Santiago,Perez,1238600,3124247,PASILLO

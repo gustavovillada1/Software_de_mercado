@@ -1,6 +1,8 @@
 package model;
 
-public class Employee implements Comparable{
+import java.io.Serializable;
+
+public class Employee implements Comparable<Employee>,Serializable{
 
 	private String name;
 	private String lastName;
@@ -69,9 +71,9 @@ public class Employee implements Comparable{
 
 
 	@Override
-	public int compareTo(Object arg0) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int compareTo(Employee o) {
+		return name.compareTo(o.getName());
+	
 	}
 	
 	
