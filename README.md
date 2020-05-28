@@ -44,3 +44,8 @@ Después de haber analisado la problematica, se pudo diseñar una solución para
 
 [Documentación del diseño](https://github.com/gustavovillada1/Software_de_mercado/blob/master/dise%C3%B1o.pdf)
 
+
+#SOFTWARE COMPLETADO
+
+**Demostración en video de la funcionalidad del software**
+[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://www.youtube.com/watch?v=wx8ySahOEGc)
