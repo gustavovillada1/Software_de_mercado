@@ -48,4 +48,4 @@ Después de haber analisado la problematica, se pudo diseñar una solución para
 #SOFTWARE COMPLETADO
 
 **Demostración en video de la funcionalidad del software**
-[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://www.youtube.com/watch?v=wx8ySahOEGc)
+[![Watch the video](https://github.com/gustavovillada1/Software_de_mercado/blob/master/Mercajusto2/src/Proyecto%20Final/miniaturavideo.png)](https://www.youtube.com/watch?v=wx8ySahOEGc)
