@@ -24,7 +24,7 @@ Después de haber ingresado con una cuenta de acceso, se verá la siguiente vent
 La ventana principal se dividirá en 3 secciones, (CAJERO, INVENTARIO Y GERENTE), cada cuenta de acceso sólo podrá hacer uso de la sección destinada a su cargo, por ejemplo si es CAJERO, sólamente tiene disponible la sección de CAJERO, el gerente tiene acceso a todas las secciones.
 
 
-![Pantalla Inicio](https://github.com/gustavovillada1/Software_de_mercado/blob/master/Mercajusto2/src/Proyecto%20Final/ventanaprincipal.png)
+![Ventana Principal](https://github.com/gustavovillada1/Software_de_mercado/blob/master/Mercajusto2/src/Proyecto%20Final/ventanaprincipal.png)
 
 
 
@@ -34,7 +34,7 @@ La ventana principal se dividirá en 3 secciones, (CAJERO, INVENTARIO Y GERENTE)
 
 Para el desarrollo de este programa se tuvo en cuenta algunos problemas presentados por el cliente, los cuales tuvieron esta fase de analisis para lograr llegar a la mejor solución para el cliente.
 
-![Pantalla Inicio](https://github.com/gustavovillada1/Software_de_mercado/blob/master/Analisis.pdf)
+[Documentación del analisis](https://github.com/gustavovillada1/Software_de_mercado/blob/master/Analisis.pdf)
 
 
 
@@ -42,5 +42,5 @@ Para el desarrollo de este programa se tuvo en cuenta algunos problemas presenta
 
 Después de haber analisado la problematica, se pudo diseñar una solución para nuestro cliente.
 
-![Pantalla Inicio](https://github.com/gustavovillada1/Software_de_mercado/blob/master/dise%C3%B1o.pdf)
+[Documentación del diseño](https://github.com/gustavovillada1/Software_de_mercado/blob/master/dise%C3%B1o.pdf)
 
