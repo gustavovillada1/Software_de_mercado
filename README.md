@@ -31,3 +31,16 @@ La ventana principal se dividirá en 3 secciones, (CAJERO, INVENTARIO Y GERENTE)
 # DOCUMENTACIÓN DE ANÁLISIS Y DISEÑO
 
 **ANALISIS**
+
+Para el desarrollo de este programa se tuvo en cuenta algunos problemas presentados por el cliente, los cuales tuvieron esta fase de analisis para lograr llegar a la mejor solución para el cliente.
+
+![Pantalla Inicio](https://github.com/gustavovillada1/Software_de_mercado/blob/master/Analisis.pdf)
+
+
+
+**DISEÑO**
+
+Después de haber analisado la problematica, se pudo diseñar una solución para nuestro cliente.
+
+![Pantalla Inicio](https://github.com/gustavovillada1/Software_de_mercado/blob/master/dise%C3%B1o.pdf)
+
